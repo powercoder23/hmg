@@ -1,0 +1,90 @@
+header.navbar{
+	background-color: red;
+	height: 10%;
+}
+
+header.navbar > button{
+	height: 100%;
+	width: 8%;
+	border: 0;
+	background-repeat: no-repeat;
+	background-color: red;
+}
+
+header.navbar > button.left-menu{
+	background-image: url('../img/left-menu-btn.gif');
+}
+
+header.navbar > button.btn2{
+	background-image: url('../img/btn2.gif');
+}
+header.navbar > button.btn3{
+	background-image: url('../img/btn3.gif');
+}
+
+footer.tabbed{
+	height: 30%;
+	background-color: red;
+}
+
+footer.tabbed ul, footer.tabbed ul li {
+	margin: 0px;
+	padding: 0px;
+}
+
+footer.tabbed ul{
+	overflow-x: auto;
+	white-space: nowrap;
+	height: 100%;
+	padding: 3% 0;
+}
+
+footer.tabbed ul li {
+	width: 30%;
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+}
+
+html, body, .main{
+	height: 100%;
+}
+
+.product{
+	border: 1px solid #fec107;
+	position: relative;
+}
+
+.product-row{
+	margin: 10px 0px;
+	overflow: hidden;
+}
+
+.product-row .product{
+	margin-left: 10px;
+}
+
+.product-row .product:first-child{
+	margin-left: 0px;
+}
+
+.product div.name{
+	color: #2c4099;
+}
+
+.product div.price{
+	color: #e10e53;
+	font-weight: bold;
+}
+
+.product button.add{
+	position: absolute;
+	font-size: 30px;
+	right: 0; bottom: 0;
+	border:0px;
+	line-height: 20px;
+	height: 30px;
+	width: 30px;
+	background-color: #fec107;
+	color: #FFF;
+}

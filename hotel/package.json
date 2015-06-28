@@ -2,7 +2,9 @@
   "name": "hotel",
   "version": "0.0.0",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "elasticsearch": "^5.0.0"
+  },
   "devDependencies": {
     "grunt-steroids": "1.x"
   }

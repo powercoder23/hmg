@@ -1,6 +1,19 @@
+.main{
+	position: relative;
+	float:left;
+}
+
 header.navbar{
-	background-color: red;
-	height: 10%;
+	background-color: #e1170b;
+	position: absolute;
+	height: 12%;
+	right:0px;
+	left:0px;
+	top:0px;
+}
+
+div.content{
+	top:10%;
 }
 
 header.navbar > button{
@@ -8,7 +21,7 @@ header.navbar > button{
 	width: 8%;
 	border: 0;
 	background-repeat: no-repeat;
-	background-color: red;
+	background-color: #e1170b;
 }
 
 header.navbar > button.left-menu{
@@ -23,8 +36,13 @@ header.navbar > button.btn3{
 }
 
 footer.tabbed{
-	height: 30%;
-	background-color: red;
+	height: 18%;
+	position:absolute;
+	background:url('../img/red-bg.gif') repeat-x;
+	background-position: 0 12px;
+	bottom:0px;
+	right:0px;
+	left:0px;
 }
 
 footer.tabbed ul, footer.tabbed ul li {
@@ -33,10 +51,9 @@ footer.tabbed ul, footer.tabbed ul li {
 }
 
 footer.tabbed ul{
-	overflow-x: auto;
+	overflow: auto;
 	white-space: nowrap;
 	height: 100%;
-	padding: 3% 0;
 }
 
 footer.tabbed ul li {
@@ -44,6 +61,16 @@ footer.tabbed ul li {
 	color: #fff;
 	display: inline-block;
 	text-align: center;
+}
+
+footer.tabbed ul li img {
+	height:32px;
+	width:32px;
+}
+
+footer.tabbed ul li span {
+	display:block;
+	font-weight:bold;
 }
 
 html, body, .main{

@@ -2,32 +2,46 @@ angular.module('SteroidsApplication', [
     'supersonic'
 ])
 
-.controller('IndexController', function($scope, supersonic) {
+.service('Product', function($q, $http){
+
+    var baseURL = 'http://localhost:9200/satnam/'
+
+    this.getProductsByCategory = function(category){
+        return $http.get(baseURL + category+'/_search').then(function(data){
+            console.log(data); 
+            return data;
+        })
+    }
+
+})
+
+.controller('IndexController', function($scope, supersonic, Product) {
+
+    //supersonic.ui.screen.setAllowedRotations(["landscapeLeft", "landscapeRight"]);
 
     $scope.navbarTitle = "dd";
 
-    var options = {
-	  message: "A longer message with \n\n\n\nmultiple lines.",
-	  buttonLabel: "Close"
-	};
-
+    function init(){
+        console.log('init')
+        Product.getProductsByCategory('sandwiches').then(function(data){
+            alert(data)
+            console.log(data);
+        })
+    }
 
 
     $scope.openLeftMenu = function(){
+
+        Product.getProductsByCategory('sandwiches').then(function(data){
+            alert(data)
+            console.log(data);
+        })
 
     	supersonic.ui.drawers.open("left").then( function() {
 			supersonic.logger.debug("Drawer was shown");
 		});
     }
 
-    $scope.tabWrapper = function(){
-    	var singleWidth = angular.element('footer.tabbed > ul > li').width();
-
-
-
-    	return {
-    		'width' :(singleWidth * 4) + 'px'
-    	}
-    }
+   
 
 });

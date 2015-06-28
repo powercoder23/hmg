@@ -1,19 +1,29 @@
 .main{
 	position: relative;
 	float:left;
+	width: 100%;
 }
 
 header.navbar{
 	background-color: #e1170b;
-	position: absolute;
+	position: fixed;
 	height: 12%;
 	right:0px;
 	left:0px;
 	top:0px;
+	z-index: 1;
 }
 
 div.content{
 	top:10%;
+	left: 0;
+	right: 0;
+	bottom: 15%;
+	position: absolute;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	z-index: 0;  
+
 }
 
 header.navbar > button{
@@ -37,7 +47,7 @@ header.navbar > button.btn3{
 
 footer.tabbed{
 	height: 18%;
-	position:absolute;
+	position:fixed;
 	background:url('../img/red-bg.gif') repeat-x;
 	background-position: 0 12px;
 	bottom:0px;
@@ -77,10 +87,6 @@ html, body, .main{
 	height: 100%;
 }
 
-.product{
-	border: 1px solid #fec107;
-	position: relative;
-}
 
 .product-row{
 	margin: 10px 0px;
@@ -89,6 +95,9 @@ html, body, .main{
 
 .product-row .product{
 	margin-left: 10px;
+	border: 1px solid #fec107;
+	position: relative;
+	max-width: 32%;
 }
 
 .product-row .product:first-child{

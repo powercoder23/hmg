@@ -24,73 +24,29 @@
             <button class="btn3"></button>
         </header>
         <div class="content">
-            <div class="row product-row">
-                <div class="col product">
-                    <div class="name">Paneer Tikka Supreme Sandwich</div>
-                    <div class="price">Rs. 99/-</div>
-                    <button class="add"> + </button>
-                </div>
-                <div class="col product">
-                    <div class="name">Paneer Tikka Supreme Sandwich</div>
-                    <div class="price">Rs. 99/-</div>
-                    <button class="add"> + </button>
-                </div>
-                <div class="col product">
-                    <div class="name">Paneer Tikka Supreme Sandwich</div>
-                    <div class="price">Rs. 99/-</div>
-                    <button class="add"> + </button>
-                </div>
-            </div>
-            <div class="row product-row">
-                <div class="col product">
-                    <div class="name">Paneer Tikka Supreme Sandwich</div>
-                    <div class="price">Rs. 99/-</div>
-                    <button class="add"> + </button>
-                </div>
-                <div class="col product">
-                    <div class="name">Paneer Tikka Supreme Sandwich</div>
-                    <div class="price">Rs. 99/-</div>
-                    <button class="add"> + </button>
-                </div>
-                <div class="col product">
-                    <div class="name">Paneer Tikka Supreme Sandwich</div>
-                    <div class="price">Rs. 99/-</div>
-                    <button class="add"> + </button>
-                </div>
-            </div>
-            <div class="row product-row">
-                <div class="col product">
-                    <div class="name">Paneer Tikka Supreme Sandwich</div>
-                    <div class="price">Rs. 99/-</div>
-                    <button class="add"> + </button>
-                </div>
-                <div class="col product">
-                    <div class="name">Paneer Tikka Supreme Sandwich</div>
-                    <div class="price">Rs. 99/-</div>
-                    <button class="add"> + </button>
-                </div>
-                <div class="col product">
-                    <div class="name">Paneer Tikka Supreme Sandwich</div>
-                    <div class="price">Rs. 99/-</div>
-                    <button class="add"> + </button>
+            <div ng-repeat="rows in allProducts[selectedTab]" class="row product-row">
+                <div ng-click="addProduct($event)" ng-repeat="product in rows" class="col product">
+                    <div class="name">{{product.name}}</div>
+                    <div class="price">Rs. {{product.price}}/-</div>
+                    <button  class="add"> + </button>
                 </div>
             </div>
         </div>
         <footer class="tabbed">
             <ul ng-style="tabWrapper" class="ulWrapper">
-                <li>
+                <li tab="sandwich" ng-click="changeTab($event)" >
                     <img src="/img/pizza.gif">
                     <span>Sandwiches</span>
                 </li>
-                <li>
+                <li tab="pizza" ng-click="changeTab($event)" >
                     <img src="/img/pizza.gif">
                     <span>Pizza</span>
                 </li>
-                <li>
+                <li tab="roll" ng-click="changeTab($event)" >
                     <img src="/img/pizza.gif">
                     <span>Rolls</span>
                 </li>
-                <li>
+                <li tab="sandwich" ng-click="changeTab($event)" >
                     <img src="/img/pizza.gif">
                     <span>Kebabs</span>
                 </li>
